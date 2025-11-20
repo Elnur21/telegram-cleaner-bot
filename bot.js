@@ -1,5 +1,6 @@
 import "dotenv/config";
 import { Bot, GrammyError, HttpError } from "grammy";
+import http from "http";
 
 const { BOT_TOKEN, SAFE_USER_IDS } = process.env;
 
@@ -72,5 +73,15 @@ bot.catch((err) => {
 console.log("Bot is running...");
 console.log("Safe user IDs:", safelist);
 bot.start();
+
+// HTTP API server
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("hello");
+});
+
+server.listen(5000, () => {
+  console.log("HTTP API server running on port 5000");
+});
 
 
