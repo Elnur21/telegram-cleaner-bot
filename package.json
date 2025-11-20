@@ -1,0 +1,15 @@
+{
+  "name": "telegram-cleaner-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot built with grammy that removes admin bang-prefixed messages except for safelisted users.",
+  "main": "bot.js",
+  "type": "module",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "grammy": "^1.32.0"
+  }
+}
+
