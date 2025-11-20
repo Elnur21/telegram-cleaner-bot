@@ -47,7 +47,7 @@ bot.on("message:text", async (ctx) => {
   if (!text.trimStart().startsWith("!")) return;
   if (!userId) return;
   if (safelist.has(userId)) return;
-  if (!(await isAdmin(ctx))) return;
+//   if (!(await isAdmin(ctx))) return;
 
   try {
     await ctx.deleteMessage();
